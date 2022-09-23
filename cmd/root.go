@@ -20,7 +20,9 @@ func Execute() error {
             return nil
         },
     }
-
+    // Add sub commands
+	rootCmd.AddCommand(initialize())
+    
     return rootCmd.ExecuteContext(context.Background())
 }
 
